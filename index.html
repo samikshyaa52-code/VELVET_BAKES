@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Bakes | Affordable Luxury Pâtisserie</title>
+    <title>Velvet Bakes | Artisanal Cakes Bhairahawa</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -21,11 +21,12 @@
             background: var(--soft-cream); 
             color: var(--velvet-black); 
             line-height: 1.7;
+            scroll-behavior: smooth;
         }
 
-        /* Luxury Header with Logo */
+        /* Luxury Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             padding: 15px 0;
             border-bottom: 1px solid rgba(228, 139, 144, 0.1);
@@ -36,15 +37,14 @@
         .logo-container img {
             height: 90px;
             width: auto;
-            transition: 0.3s;
         }
 
         nav { margin-top: 10px; }
-        nav ul { display: flex; justify-content: center; list-style: none; gap: 25px; }
+        nav ul { display: flex; justify-content: center; list-style: none; gap: 20px; }
         nav a { 
             text-decoration: none; color: var(--velvet-black); 
             font-size: 10px; font-weight: 600; text-transform: uppercase; 
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
         }
 
         .hero {
@@ -82,12 +82,18 @@
         .btn-order {
             padding: 10px 25px; background: var(--velvet-black); color: white;
             border: none; font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-            cursor: pointer; transition: 0.3s;
+            cursor: pointer; transition: 0.3s; display: inline-block; text-decoration: none;
         }
         .btn-order:hover { background: var(--accent-rose); }
 
         footer { padding: 50px; text-align: center; border-top: 1px solid #eee; background: white; }
-        .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; }
+        
+        .whatsapp { 
+            position: fixed; bottom: 30px; right: 30px; 
+            background: #25D366; color: white; width: 55px; height: 55px; 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 
@@ -101,7 +107,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#collection">Collection</a></li>
-            <li><a href="#order">Order</a></li>
+            <li><a href="tel:+9779766822903">Call Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -109,14 +115,14 @@
 
 <section class="hero" id="home">
     <div>
-        <h1 style="font-family: 'Playfair Display'; font-size: 50px;">Sweet Moments</h1>
-        <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 11px;">Exquisite Flavors, Everyday Prices</p>
+        <h1 style="font-family: 'Playfair Display'; font-size: 50px;">Bespoke Artistry</h1>
+        <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 11px;">Handcrafted in Bhairahawa</p>
     </div>
 </section>
 
 <div class="section-title" id="collection">
-    <p>Our Favorites</p>
-    <h2>The 2,000 & Under Collection</h2>
+    <p>Signature Flavors</p>
+    <h2>Premium Cakes Under NPR 2,000</h2>
 </div>
 
 <section class="collection-grid">
@@ -125,7 +131,7 @@
         <div class="details">
             <h3>Classic Choco Truffle</h3>
             <p class="price">NPR 1,500</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903?text=I'm%20interested%20in%20the%20Choco%20Truffle" class="btn-order">Order via WhatsApp</a>
         </div>
     </div>
     <div class="cake-card">
@@ -133,7 +139,7 @@
         <div class="details">
             <h3>Velvet Rose Petal</h3>
             <p class="price">NPR 1,800</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903?text=I'm%20interested%20in%20the%20Velvet%20Rose" class="btn-order">Order via WhatsApp</a>
         </div>
     </div>
     <div class="cake-card">
@@ -141,7 +147,7 @@
         <div class="details">
             <h3>Pure Vanilla Cloud</h3>
             <p class="price">NPR 1,200</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903?text=I'm%20interested%20in%20the%20Vanilla%20Cloud" class="btn-order">Order via WhatsApp</a>
         </div>
     </div>
     <div class="cake-card">
@@ -149,7 +155,7 @@
         <div class="details">
             <h3>Butterscotch Bliss</h3>
             <p class="price">NPR 1,400</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
     <div class="cake-card">
@@ -157,7 +163,7 @@
         <div class="details">
             <h3>Strawberry Cream</h3>
             <p class="price">NPR 1,600</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
     <div class="cake-card">
@@ -165,7 +171,7 @@
         <div class="details">
             <h3>Mocha Espresso</h3>
             <p class="price">NPR 1,700</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
     <div class="cake-card">
@@ -173,7 +179,7 @@
         <div class="details">
             <h3>White Forest Joy</h3>
             <p class="price">NPR 1,500</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
     <div class="cake-card">
@@ -181,7 +187,7 @@
         <div class="details">
             <h3>Confetti Celebration</h3>
             <p class="price">NPR 1,300</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
     <div class="cake-card">
@@ -189,7 +195,7 @@
         <div class="details">
             <h3>Zesty Lemon Curd</h3>
             <p class="price">NPR 1,450</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
     <div class="cake-card">
@@ -197,18 +203,20 @@
         <div class="details">
             <h3>Caramel Fudge Mini</h3>
             <p class="price">NPR 1,900</p>
-            <button class="btn-order">Inquire Now</button>
+            <a href="https://wa.me/9779766822903" class="btn-order">Order Now</a>
         </div>
     </div>
 </section>
 
 <footer id="contact">
-    <img src="logo 2.png" style="height: 50px; opacity: 0.5; margin-bottom: 15px;">
-    <p style="font-size: 13px;">Bhairahawa, Nepal | +977 98XXXXXXXX</p>
-    <p style="font-size: 9px; margin-top: 15px; color: #bbb;">© 2026 VELVET BAKES.</p>
+    <img src="logo 2.png" style="height: 50px; opacity: 0.6; margin-bottom: 15px;">
+    <p style="font-size: 14px; font-weight: 600;">Contact Us</p>
+    <p style="font-size: 13px;">Bhairahawa, Nepal</p>
+    <p style="font-size: 13px; margin: 5px 0;">Phone: <strong>9766822903</strong></p>
+    <p style="font-size: 9px; margin-top: 20px; color: #bbb;">© 2026 VELVET BAKES.</p>
 </footer>
 
-<a href="https://wa.me/97798XXXXXXXX" class="whatsapp">💬</a>
+<a href="https://wa.me/9779766822903" class="whatsapp">💬</a>
 
 </body>
-</html>     
+</html>
