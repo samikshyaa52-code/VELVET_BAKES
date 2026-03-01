@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Bakes | The 2026 Gold Collection</title>
+    <title>Velvet Bakes | Affordable Luxury Pâtisserie</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -13,7 +13,6 @@
             --accent-rose: #e48b90;
             --velvet-black: #1a1a1a;
             --soft-cream: #fffafb;
-            --glass: rgba(255, 255, 255, 0.9);
         }
 
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -24,85 +23,71 @@
             line-height: 1.7;
         }
 
-        /* Perfect Logo Integration */
+        /* Luxury Header with Logo */
         header {
-            background: var(--glass);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             padding: 15px 0;
-            border-bottom: 1px solid rgba(228, 139, 144, 0.2);
+            border-bottom: 1px solid rgba(228, 139, 144, 0.1);
             position: sticky; top: 0; z-index: 1000;
             text-align: center;
         }
 
         .logo-container img {
-            height: 100px;
+            height: 90px;
             width: auto;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
         }
-        .logo-container img:hover { transform: scale(1.02); }
 
         nav { margin-top: 10px; }
-        nav ul { display: flex; justify-content: center; list-style: none; gap: 30px; }
+        nav ul { display: flex; justify-content: center; list-style: none; gap: 25px; }
         nav a { 
             text-decoration: none; color: var(--velvet-black); 
-            font-size: 11px; font-weight: 600; text-transform: uppercase; 
-            letter-spacing: 2px; transition: 0.3s;
+            font-size: 10px; font-weight: 600; text-transform: uppercase; 
+            letter-spacing: 2px;
         }
-        nav a:hover { color: var(--accent-rose); }
 
-        /* Hero Section */
         .hero {
-            height: 70vh; display: flex; align-items: center; justify-content: center;
+            height: 60vh; display: flex; align-items: center; justify-content: center;
             text-align: center; color: white;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
             url("https://images.unsplash.com/photo-1519340333755-56e9c1d04579?q=80&w=2070") center/cover;
-            background-attachment: fixed;
         }
 
-        /* Menu Grid */
-        .section-title { padding-top: 80px; text-align: center; }
-        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 400; }
-        .section-title p { color: var(--accent-rose); text-transform: uppercase; letter-spacing: 4px; font-size: 12px; margin-bottom: 10px; }
+        .section-title { padding: 60px 0 20px; text-align: center; }
+        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; }
+        .section-title p { color: var(--accent-rose); text-transform: uppercase; letter-spacing: 3px; font-size: 11px; }
 
+        /* 10 Cakes Grid */
         .collection-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px; padding: 60px 8%;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px; padding: 40px 8%;
         }
 
         .cake-card {
-            background: white; border: 1px solid #f2f2f2;
-            transition: all 0.4s ease; overflow: hidden;
+            background: white; border-radius: 4px;
+            transition: 0.4s; overflow: hidden;
+            border: 1px solid #f9f9f9;
         }
-        .cake-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .cake-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
         
-        .image-box { height: 350px; overflow: hidden; }
-        .image-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
-        .cake-card:hover .image-box img { transform: scale(1.1); }
+        .image-box { height: 300px; overflow: hidden; }
+        .image-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        .details { padding: 25px; text-align: center; }
-        .details h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 8px; }
-        .price { color: var(--accent-rose); font-weight: 600; font-size: 14px; margin-bottom: 15px; }
+        .details { padding: 20px; text-align: center; }
+        .details h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 5px; }
+        .price { color: var(--accent-rose); font-weight: 600; font-size: 15px; margin-bottom: 15px; }
 
         .btn-order {
-            padding: 12px 30px; background: var(--velvet-black); color: white;
-            border: none; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+            padding: 10px 25px; background: var(--velvet-black); color: white;
+            border: none; font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
             cursor: pointer; transition: 0.3s;
         }
         .btn-order:hover { background: var(--accent-rose); }
 
-        /* Bespoke Form */
-        .form-container { background: white; padding: 80px 10%; margin-top: 50px; text-align: center; }
-        input, textarea { width: 100%; max-width: 600px; padding: 15px; margin: 10px auto; display: block; border: 1px solid #ddd; }
-
-        footer { padding: 60px; text-align: center; border-top: 1px solid #eee; }
-
-        .whatsapp-btn {
-            position: fixed; bottom: 30px; right: 30px; background: #25D366;
-            color: white; width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; text-decoration: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); z-index: 2000;
-        }
+        footer { padding: 50px; text-align: center; border-top: 1px solid #eee; background: white; }
+        .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; }
     </style>
 </head>
 
@@ -115,127 +100,115 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#collection">The Collection</a></li>
-            <li><a href="#order">Bespoke Inquiries</a></li>
-            <li><a href="#contact">Our Studio</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero" id="home">
     <div>
-        <h1 style="font-family: 'Playfair Display'; font-size: 60px; font-weight: 400;">The Art of Celebration</h1>
-        <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 12px;">Premium Patisserie Bhairahawa</p>
+        <h1 style="font-family: 'Playfair Display'; font-size: 50px;">Sweet Moments</h1>
+        <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 11px;">Exquisite Flavors, Everyday Prices</p>
     </div>
 </section>
 
 <div class="section-title" id="collection">
-    <p>Handcrafted Excellence</p>
-    <h2>The 2026 Signature Collection</h2>
+    <p>Our Favorites</p>
+    <h2>The 2,000 & Under Collection</h2>
 </div>
 
 <section class="collection-grid">
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"></div>
         <div class="details">
-            <h3>Midnight Chocolate Truffle</h3>
-            <p class="price">NPR 2,500</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Classic Choco Truffle</h3>
+            <p class="price">NPR 1,500</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e"></div>
         <div class="details">
-            <h3>Royal Red Velvet</h3>
-            <p class="price">NPR 2,800</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Velvet Rose Petal</h3>
+            <p class="price">NPR 1,800</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636"></div>
         <div class="details">
-            <h3>Vintage Vanilla Bean</h3>
-            <p class="price">NPR 2,200</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Pure Vanilla Cloud</h3>
+            <p class="price">NPR 1,200</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729"></div>
         <div class="details">
-            <h3>Salted Caramel Gold</h3>
-            <p class="price">NPR 3,200</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Butterscotch Bliss</h3>
+            <p class="price">NPR 1,400</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f"></div>
         <div class="details">
-            <h3>Pistachio Rose Dream</h3>
-            <p class="price">NPR 3,500</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Strawberry Cream</h3>
+            <p class="price">NPR 1,600</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c"></div>
         <div class="details">
-            <h3>Dark Forest Cherry</h3>
-            <p class="price">NPR 2,600</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Mocha Espresso</h3>
+            <p class="price">NPR 1,700</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1557308535-44a54ca9a11a"></div>
         <div class="details">
-            <h3>White Chocolate Raspberry</h3>
-            <p class="price">NPR 2,900</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>White Forest Joy</h3>
+            <p class="price">NPR 1,500</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1464347744102-11db6282f854"></div>
         <div class="details">
-            <h3>Belgian Biscoff Crunch</h3>
-            <p class="price">NPR 3,400</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Confetti Celebration</h3>
+            <p class="price">NPR 1,300</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1562440499-64c9a111f713"></div>
         <div class="details">
-            <h3>Lemon Elderflower Tier</h3>
-            <p class="price">NPR 4,000</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Zesty Lemon Curd</h3>
+            <p class="price">NPR 1,450</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
     <div class="cake-card">
         <div class="image-box"><img src="https://images.unsplash.com/photo-1586985289906-4069f07fe147"></div>
         <div class="details">
-            <h3>Classic Tiramisu Cake</h3>
-            <p class="price">NPR 2,700</p>
-            <button class="btn-order" onclick="location.href='#order'">Inquire Now</button>
+            <h3>Caramel Fudge Mini</h3>
+            <p class="price">NPR 1,900</p>
+            <button class="btn-order">Inquire Now</button>
         </div>
     </div>
 </section>
 
-<section class="form-container" id="order">
-    <h2>Bespoke Cake Inquiry</h2>
-    <p style="margin-bottom: 30px;">Let our artisans bring your vision to life.</p>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="Preferred Flavor/Theme">
-        <textarea rows="5" placeholder="Special Instructions (e.g., Eggless, Less Sugar, Custom Message)"></textarea>
-        <button type="submit" class="btn-order" style="width: 250px; margin-top: 20px;">Send Inquiry</button>
-    </form>
-</section>
-
 <footer id="contact">
-    <img src="logo 2.png" style="height: 60px; opacity: 0.5; margin-bottom: 20px;">
-    <p>Bhairahawa, Nepal | +977 98XXXXXXXX</p>
-    <p style="font-size: 10px; margin-top: 20px; color: #999;">© 2026 VELVET BAKES. CRAFTED WITH PASSION.</p>
+    <img src="logo 2.png" style="height: 50px; opacity: 0.5; margin-bottom: 15px;">
+    <p style="font-size: 13px;">Bhairahawa, Nepal | +977 98XXXXXXXX</p>
+    <p style="font-size: 9px; margin-top: 15px; color: #bbb;">© 2026 VELVET BAKES.</p>
 </footer>
 
-<a href="https://wa.me/97798XXXXXXXX" class="whatsapp-btn">💬</a>
+<a href="https://wa.me/97798XXXXXXXX" class="whatsapp">💬</a>
 
 </body>
-</html>
+</html>     
