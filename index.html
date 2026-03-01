@@ -13,6 +13,7 @@
             --warm-wheat: #e5d3b3;
             --accent-gold: #c5a059;
             --input-bg: #3d251c;
+            --soft-pink: #f2cbd0;
         }
 
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -24,18 +25,16 @@
             scroll-behavior: smooth;
         }
 
+        /* Navigation */
         header {
             background: rgba(44, 24, 16, 0.98);
-            padding: 20px 0;
+            padding: 15px 0;
             position: sticky; top: 0; z-index: 1000;
-            border-bottom: 1px solid rgba(229, 211, 179, 0.1);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
             text-align: center;
         }
-        .logo-box img { height: 80px; width: auto; }
-        .brand-name { font-family: 'Great Vibes', cursive; font-size: 38px; color: var(--warm-wheat); display: block; margin-top: -5px; }
-
-        .section-padding { padding: 60px 10%; }
-        .text-center { text-align: center; }
+        .logo-box img { height: 75px; width: auto; }
+        .brand-name { font-family: 'Great Vibes', cursive; font-size: 32px; color: var(--warm-wheat); display: block; margin-top: -5px; }
 
         /* Cart Sidebar */
         #cart-sidebar {
@@ -45,24 +44,35 @@
             overflow-y: auto;
         }
         #cart-sidebar.active { right: 0; }
-        .cart-item { border-bottom: 1px solid #4a2d22; padding: 10px 0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
-        .remove-btn { color: #ff6b6b; cursor: pointer; font-size: 12px; margin-left: 10px; border: 1px solid #ff6b6b; padding: 2px 5px; border-radius: 3px; }
+        .cart-item { border-bottom: 1px solid #4a2d22; padding: 12px 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+        .remove-btn { color: #ff6b6b; cursor: pointer; font-size: 9px; border: 1px solid #ff6b6b; padding: 2px 5px; border-radius: 3px; text-transform: uppercase; }
+
+        /* Sections */
+        .section-padding { padding: 80px 10%; }
+        .text-center { text-align: center; }
 
         /* Menu Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 40px; }
-        .item-card { background: #3d251c; padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
-        .item-card:hover { transform: translateY(-5px); border: 1px solid var(--accent-gold); }
+        .item-card { background: #3d251c; padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; border: 1px solid transparent; }
+        .item-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
         .item-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
-        .price { color: var(--accent-gold); font-weight: 700; display: block; margin: 10px 0; }
+        .price { color: var(--accent-gold); font-weight: 700; display: block; margin: 10px 0; font-size: 1.1rem; }
 
-        .btn-cart { background: var(--accent-gold); color: var(--dark-cocoa); border: none; padding: 10px 20px; font-weight: 700; cursor: pointer; border-radius: 5px; font-size: 12px; width: 100%; }
-        .cart-toggle { position: fixed; top: 30px; right: 30px; background: var(--accent-gold); color: var(--dark-cocoa); padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1100; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .btn-cart { background: var(--accent-gold); color: var(--dark-cocoa); border: none; padding: 12px; font-weight: 700; cursor: pointer; border-radius: 5px; font-size: 11px; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
+        .cart-toggle { position: fixed; top: 25px; right: 25px; background: var(--accent-gold); color: var(--dark-cocoa); padding: 15px; border-radius: 50%; cursor: pointer; z-index: 1100; box-shadow: 0 5px 15px rgba(0,0,0,0.3); font-weight: bold; }
 
-        /* Forms */
-        .order-box { background: #3d251c; padding: 15px; border-radius: 10px; margin-top: 20px; }
-        input, select, textarea { width: 100%; padding: 10px; background: #2c1810; border: 1px solid #4a2d22; color: white; margin-bottom: 10px; border-radius: 5px; font-family: 'Montserrat'; }
+        /* Upcoming Flavors */
+        .upcoming-box { background: #25140d; padding: 40px; border-radius: 15px; border: 1px dashed var(--accent-gold); display: inline-block; margin-top: 40px; }
+        .flavor-tag { background: var(--accent-gold); color: var(--dark-cocoa); padding: 5px 15px; border-radius: 50px; font-size: 10px; font-weight: 700; margin-bottom: 15px; display: inline-block; }
 
-        .closing-note { background: #361f15; padding: 40px 10%; border-top: 1px solid rgba(197,160,89,0.2); }
+        /* The Velvet Promise */
+        .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; text-align: left; }
+        .promise-card h3 { font-family: 'Playfair Display', serif; color: var(--accent-gold); margin-bottom: 10px; }
+        .promise-card p { font-size: 14px; color: #d1bfa1; line-height: 1.7; }
+
+        /* Order Form in Sidebar */
+        .sidebar-form { background: #3d251c; padding: 15px; border-radius: 10px; margin-top: 20px; }
+        input, select, textarea { width: 100%; padding: 12px; background: #2c1810; border: 1px solid #4a2d22; color: white; margin-bottom: 10px; border-radius: 5px; font-family: 'Montserrat'; }
 
         footer { background: #1a0e09; padding: 60px 10%; text-align: center; border-top: 1px solid #3d251c; }
     </style>
@@ -73,26 +83,26 @@
 <div class="cart-toggle" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
 
 <div id="cart-sidebar">
-    <h2 style="font-family: 'Playfair Display'; margin-bottom: 20px; color: white;">Your Selection</h2>
+    <h2 style="font-family: 'Playfair Display'; margin-bottom: 20px; color: white;">Your Basket</h2>
     <div id="cart-items"></div>
     
-    <div style="margin-top: 20px; border-top: 1px solid var(--accent-gold); padding-top: 10px;">
-        <p>Subtotal: NPR <span id="cart-total">0</span></p>
-        <label style="font-size: 12px; color: var(--accent-gold);">Delivery Area:</label>
+    <div style="margin-top: 20px; border-top: 1px solid var(--accent-gold); padding-top: 15px;">
+        <p style="display: flex; justify-content: space-between;">Subtotal: <span>NPR <span id="cart-total">0</span></span></p>
+        <label style="font-size: 11px; color: var(--accent-gold); text-transform: uppercase; margin-top: 10px; display: block;">Select Delivery</label>
         <select id="delivery-option" onchange="updateTotal()">
             <option value="100">Same District (NPR 100)</option>
-            <option value="150">Other Areas (NPR 150)</option>
+            <option value="150">Other Districts (NPR 150)</option>
         </select>
-        <p><strong>Grand Total: NPR <span id="grand-total">0</span></strong></p>
+        <p style="font-size: 18px; display: flex; justify-content: space-between;"><strong>Total:</strong> <strong>NPR <span id="grand-total">0</span></strong></p>
     </div>
     
-    <div class="order-box">
-        <input type="text" id="cust-name" placeholder="Your Name" required>
-        <input type="text" id="cust-addr" placeholder="Full Delivery Address" required>
-        <textarea id="cust-notes" placeholder="Special Instructions (e.g., No Sugar, Extra Fiber)"></textarea>
+    <div class="sidebar-form">
+        <input type="text" id="cust-name" placeholder="Full Name" required>
+        <input type="text" id="cust-addr" placeholder="Bhairahawa Address" required>
+        <textarea id="cust-notes" placeholder="Notes (e.g., Eggless, Less Sugar)"></textarea>
         <button class="btn-cart" onclick="checkout()">Checkout to WhatsApp</button>
     </div>
-    <button onclick="toggleCart()" style="background:none; border:none; color:white; cursor:pointer; margin-top:15px; font-size: 12px;">← Continue Browsing</button>
+    <button onclick="toggleCart()" style="background:none; border:none; color:white; cursor:pointer; margin-top:15px; font-size: 12px; opacity: 0.6;">Close Sidebar</button>
 </div>
 
 <header>
@@ -103,95 +113,77 @@
 </header>
 
 <section class="section-padding text-center">
-    <h2 style="font-family: 'Playfair Display'; font-size: 35px; color: white;">The Whole Wheat Cupcake Collection</h2>
-    <p style="color: var(--accent-gold); letter-spacing: 2px; font-size: 12px;">Crafted with 100% Atta & Heart</p>
+    <h2 style="font-family: 'Playfair Display'; font-size: 40px; color: white;">Whole Wheat Cupcakes</h2>
+    <p style="color: var(--accent-gold); letter-spacing: 3px; font-size: 11px; text-transform: uppercase;">Freshly Baked In Bhairahawa</p>
     
     <div class="grid">
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce">
-            <h3>Jaggery Spice Cupcake</h3>
-            <span class="price">NPR 100</span>
-            <button class="btn-cart" onclick="addToCart('Jaggery Spice Cupcake', 100)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd">
-            <h3>Honey Atta Cupcake</h3>
-            <span class="price">NPR 120</span>
-            <button class="btn-cart" onclick="addToCart('Honey Atta Cupcake', 120)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1519869325930-281384150729">
-            <h3>Dark Chocolate Wheat</h3>
-            <span class="price">NPR 150</span>
-            <button class="btn-cart" onclick="addToCart('Dark Chocolate Wheat', 150)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35">
-            <h3>Apple Cinnamon Atta</h3>
-            <span class="price">NPR 140</span>
-            <button class="btn-cart" onclick="addToCart('Apple Cinnamon Atta', 140)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1582760933519-79822a168a73">
-            <h3>Oatmeal Raisin Cupcake</h3>
-            <span class="price">NPR 130</span>
-            <button class="btn-cart" onclick="addToCart('Oatmeal Raisin Cupcake', 130)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c170db0a">
-            <h3>Blueberry Wheat Bliss</h3>
-            <span class="price">NPR 180</span>
-            <button class="btn-cart" onclick="addToCart('Blueberry Wheat Bliss', 180)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1614707267537-b85af00c4b81">
-            <h3>Peanut Butter Wheat</h3>
-            <span class="price">NPR 160</span>
-            <button class="btn-cart" onclick="addToCart('Peanut Butter Wheat', 160)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f">
-            <h3>Almond Crunch Cupcake</h3>
-            <span class="price">NPR 170</span>
-            <button class="btn-cart" onclick="addToCart('Almond Crunch Cupcake', 170)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307">
-            <h3>Velvet Beetroot Wheat</h3>
-            <span class="price">NPR 190</span>
-            <button class="btn-cart" onclick="addToCart('Velvet Beetroot Wheat', 190)">Add to Cart</button>
-        </div>
-        <div class="item-card">
-            <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75">
-            <h3>Saffron Wheat Splendor</h3>
-            <span class="price">NPR 210</span>
-            <button class="btn-cart" onclick="addToCart('Saffron Wheat Splendor', 210)">Add to Cart</button>
-        </div>
+        <script>
+            // Data for generating items efficiently
+            const items = [
+                {n: "Jaggery Spice", p: 100, img: "https://images.unsplash.com/photo-1587668178277-295251f900ce"},
+                {n: "Honey Atta", p: 120, img: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd"},
+                {n: "Dark Cocoa", p: 150, img: "https://images.unsplash.com/photo-1519869325930-281384150729"},
+                {n: "Apple Cinnamon", p: 140, img: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35"},
+                {n: "Oatmeal Raisin", p: 130, img: "https://images.unsplash.com/photo-1582760933519-79822a168a73"},
+                {n: "Blueberry Bliss", p: 180, img: "https://images.unsplash.com/photo-1534422298391-e4f8c170db0a"},
+                {n: "Peanut Butter", p: 160, img: "https://images.unsplash.com/photo-1614707267537-b85af00c4b81"},
+                {n: "Almond Crunch", p: 170, img: "https://images.unsplash.com/photo-1602351447937-745cb720612f"},
+                {n: "Beetroot Velvet", p: 190, img: "https://images.unsplash.com/photo-1551024506-0bccd828d307"},
+                {n: "Saffron Splendor", p: 210, img: "https://images.unsplash.com/photo-1603532648955-039310d9ed75"},
+                {n: "Signature Wheat Cake", p: 500, img: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e"}
+            ];
+            
+            document.write(items.map(i => `
+                <div class="item-card">
+                    <img src="${i.img}" alt="${i.n}">
+                    <h3>${i.n}</h3>
+                    <span class="price">NPR ${i.p}</span>
+                    <button class="btn-cart" onclick="addToCart('${i.n}', ${i.p})">Add to Cart</button>
+                </div>
+            `).join(''));
+        </script>
+    </div>
+
+    <div class="upcoming-box">
+        <span class="flavor-tag">COMING SOON</span>
+        <h3 style="font-family: 'Playfair Display'; color: white;">Next Month: Pistachio & Rose Atta</h3>
+        <p style="font-size: 13px; color: #a18e7d; margin-top: 10px;">Get ready for a floral, nutrient-packed fusion of crushed pistachios and edible rose petals.</p>
     </div>
 </section>
 
-<section class="closing-note text-center">
-    <h2 style="font-family: 'Great Vibes', cursive; font-size: 45px; color: var(--accent-gold);">We love to serve you</h2>
-    <p style="max-width: 750px; margin: 15px auto; font-style: italic; color: #d1bfa1;">"This is very healthy with high nutrients—made in your way. Our bakes prioritize your wellness without compromising on the velvet-rich taste you love."</p>
+<section class="section-padding" style="background: #361f15;">
+    <div class="text-center">
+        <h2 style="font-family: 'Great Vibes', cursive; font-size: 50px; color: var(--accent-gold);">We Love To Serve You</h2>
+        <p style="color: #d1bfa1; font-style: italic;">"Healthy High Nutrients • Made In Your Way"</p>
+    </div>
+
+    <div class="promise-grid">
+        <div class="promise-card">
+            <h3>Fiber-Rich Foundation</h3>
+            <p>Our bakes are 100% Maida-free. By using whole wheat (Atta), we preserve the bran and germ, ensuring every bite is high in dietary fiber and essential B-vitamins for a healthier heart and digestion.</p>
+        </div>
+        <div class="promise-card">
+            <h3>Nutrient Density</h3>
+            <p>We don't use empty calories. Our cupcakes are packed with high-quality nutrients from organic jaggery, honey, and nuts, giving you a natural energy boost without the sugar crash.</p>
+        </div>
+        <div class="promise-card">
+            <h3>Bespoke Baking</h3>
+            <p>Your way is the best way. We take special pride in customizing orders—whether you need them eggless, vegan, or with specific natural sweeteners. Your wellness is our primary craft.</p>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <img src="logo 2.png" style="height: 70px; filter: sepia(1); margin-bottom: 20px;">
-    <p><strong>Velvet Bakes | Bhairahawa</strong></p>
-    <p>📞 Phone: <strong>9766822903</strong></p>
-    <p>📧 Email: <a href="mailto:samikshyaaa72@gmail.com" style="color: var(--accent-gold); text-decoration: none;">samikshyaaa72@gmail.com</a></p>
-    <div style="margin-top: 20px;">
-        <span style="font-size: 10px; color: #666; letter-spacing: 2px;">WHOLE GRAIN • HIGH NUTRIENT • BESPOKE BAKING</span>
-    </div>
-    <p style="color: #444; font-size: 10px; margin-top: 30px;">© 2026 VELVET BAKES. ESTABLISHED IN BHAIRAHAWA.</p>
+    <img src="logo 2.png" style="height: 60px; filter: sepia(1); margin-bottom: 20px;">
+    <p><strong>Velvet Bakes | Bhairahawa, Nepal</strong></p>
+    <p>📞 9766822903</p>
+    <p>📧 <a href="mailto:samikshyaaa72@gmail.com" style="color: var(--accent-gold); text-decoration: none;">samikshyaaa72@gmail.com</a></p>
+    <p style="color: #444; font-size: 10px; margin-top: 40px; border-top: 1px solid #2c1810; padding-top: 20px;">© 2026 VELVET BAKES. THE WHOLE WHEAT REVOLUTION.</p>
 </footer>
 
 <script>
     let cart = [];
-    
-    function toggleCart() {
-        document.getElementById('cart-sidebar').classList.toggle('active');
-    }
+    function toggleCart() { document.getElementById('cart-sidebar').classList.toggle('active'); }
 
     function addToCart(name, price) {
         cart.push({name, price});
@@ -213,7 +205,10 @@
             cartDiv.innerHTML += `
                 <div class="cart-item">
                     <span>${item.name}</span>
-                    <span>NPR ${item.price} <span class="remove-btn" onclick="removeFromCart(${index})">×</span></span>
+                    <div style="display:flex; align-items:center;">
+                        <span style="margin-right:10px;">NPR ${item.price}</span>
+                        <span class="remove-btn" onclick="removeFromCart(${index})">Remove</span>
+                    </div>
                 </div>`;
         });
         document.getElementById('cart-count').innerText = cart.length;
@@ -232,13 +227,12 @@
         const addr = document.getElementById('cust-addr').value;
         const notes = document.getElementById('cust-notes').value;
         const total = document.getElementById('grand-total').innerText;
+        if(cart.length === 0) return alert('Your cart is empty');
+        if(!name || !addr) return alert('Please enter your details');
         
-        if(cart.length === 0) { alert('Your cart is empty!'); return; }
-        if(!name || !addr) { alert('Please enter your name and address'); return; }
-
-        let itemString = cart.map(i => `- ${i.name} (NPR ${i.price})`).join('%0A');
-        const text = `*Velvet Bakes Order*%0A*Name:* ${name}%0A*Address:* ${addr}%0A*Items:*%0A${itemString}%0A*Total (inc. delivery):* NPR ${total}%0A*Notes:* ${notes}`;
-        window.open(`https://wa.me/9779766822903?text=${text}`, '_blank');
+        let itemList = cart.map(i => `- ${i.name}`).join('%0A');
+        const waLink = `https://wa.me/9779766822903?text=*Velvet Bakes Order*%0A*Name:* ${name}%0A*Address:* ${addr}%0A*Items:*%0A${itemList}%0A*Total:* NPR ${total}%0A*Note:* ${notes}`;
+        window.open(waLink, '_blank');
     }
 </script>
 
