@@ -3,179 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshMart Shankernagar | Fresh Vegetables & Groceries</title>
+    <title>FreshMart Shankernagar | Fresh Veggies</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #27ae60;
-            --veg-green: #2ecc71;
             --secondary: #2c3e50;
-            --whatsapp: #25d366;
-            --light: #f4f7f6;
-            --white: #ffffff;
+            --bg-light: #f4f7f6;
         }
 
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--light); color: var(--secondary); scroll-behavior: smooth; }
-        
-        /* --- Header --- */
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg-light); color: var(--secondary); }
+
         header { 
             background: white; padding: 15px 5%; display: flex; justify-content: space-between; 
             align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
         }
-        .logo-box h1 { margin: 0; color: var(--primary); font-size: 1.5rem; }
-        .contact-top { font-size: 0.8rem; color: #666; }
+        .logo { color: var(--primary); margin: 0; font-size: 1.5rem; font-weight: 800; }
+        .contact-info { font-size: 0.85rem; text-align: right; }
 
-        /* --- Category Sections --- */
-        .section-container { padding: 40px 5%; }
-        .veg-header { 
-            background: var(--veg-green); color: white; padding: 15px; 
-            border-radius: 10px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;
+        .container { padding: 30px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-header { margin-bottom: 30px; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 25px; 
         }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-        
         .card { 
-            background: white; border-radius: 12px; padding: 15px; text-align: center; 
-            border: 1px solid #eee; transition: 0.3s; position: relative;
+            background: white; border-radius: 12px; overflow: hidden;
+            border: 1px solid #ddd; transition: 0.3s; display: flex; flex-direction: column;
         }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        
-        .badge { 
-            position: absolute; top: 10px; right: 10px; background: #e74c3c; 
-            color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 20px; 
-        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        .card img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
-        .veg-name { font-weight: bold; font-size: 1.1rem; margin: 5px 0; }
-        .unit { color: #888; font-size: 0.8rem; margin-bottom: 10px; }
-        .price { font-size: 1.2rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
-        
+        /* Ensuring all images stay the same size */
+        .img-box { width: 100%; height: 180px; overflow: hidden; background: #eee; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .content { padding: 15px; text-align: center; }
+        .name-en { font-size: 1.1rem; font-weight: 700; margin: 0; }
+        .name-np { font-size: 0.9rem; color: var(--primary); margin-bottom: 10px; font-weight: 600; }
+        .price { font-size: 1.2rem; font-weight: 800; color: #333; margin-bottom: 15px; }
+
         .add-btn { 
-            background: var(--primary); color: white; border: none; width: 100%; padding: 10px; 
-            border-radius: 6px; cursor: pointer; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: var(--primary); color: white; border: none; width: 100%; 
+            padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
         }
-        .add-btn:hover { background: var(--secondary); }
+        .add-btn:hover { background: #219150; }
 
-        /* --- Footer & Contact --- */
-        .info-footer { background: white; padding: 40px 5%; margin-top: 40px; border-top: 5px solid var(--primary); }
-        .address-box { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        footer { background: var(--secondary); color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
-
-        .whatsapp-float {
-            position: fixed; bottom: 20px; right: 20px; background: var(--whatsapp); color: white;
-            width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; 
-            justify-content: center; font-size: 28px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
-        }
+        .footer { background: var(--secondary); color: white; padding: 40px 5%; text-align: center; margin-top: 40px; }
+        .footer a { color: #2ecc71; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-box">
-            <h1>FRESHMART SHANKERNAGAR</h1>
-            <div class="contact-top">
-                <i class="fas fa-envelope"></i> freshmart@gmail.com | <i class="fas fa-phone"></i> +977-98XXXXXXXX
+<header>
+    <div>
+        <h1 class="logo">FRESHMART SHANKERNAGAR</h1>
+        <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i> Shankernagar, Rupandehi | <i class="fas fa-envelope"></i> freshmart@gmail.com
+        </div>
+    </div>
+    <div style="background: #e8f5e9; padding: 10px 20px; border-radius: 30px; font-weight: bold;">
+        <i class="fas fa-shopping-cart" style="color:var(--primary)"></i> Cart: <span id="cart-count">0</span>
+    </div>
+</header>
+
+<div class="container">
+    <h2 class="section-header">Fresh Vegetables (ताजा तरकारीहरु)</h2>
+
+    <div class="grid">
+        <div class="card">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=1470&auto=format&fit=crop" alt="Potato">
+            </div>
+            <div class="content">
+                <p class="name-en">Potato</p>
+                <p class="name-np">आलु (Aloo)</p>
+                <div class="price">Rs. 50 / kg</div>
+                <button class="add-btn" onclick="add()"><i class="fas fa-plus"></i> Add to Cart</button>
             </div>
         </div>
-        <div style="font-weight: bold; color: var(--primary);">
-            <i class="fas fa-shopping-basket"></i> Items: <span id="cart-val">0</span>
-        </div>
-    </header>
 
-    <main class="section-container">
-        <div class="veg-header">
-            <i class="fas fa-leaf fa-2x"></i>
-            <div>
-                <h2 style="margin:0">Direct from Farm Vegetables</h2>
-                <p style="margin:0; font-size: 0.8rem;">Picked daily for Shankernagar homes</p>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?q=80&w=1470&auto=format&fit=crop" alt="Tomato">
+            </div>
+            <div class="content">
+                <p class="name-en">Tomato</p>
+                <p class="name-np">गोलभेडा (Golbheda)</p>
+                <div class="price">Rs. 75 / kg</div>
+                <button class="add-btn" onclick="add()"><i class="fas fa-plus"></i> Add to Cart</button>
             </div>
         </div>
 
-        <div class="grid">
-            <div class="card">
-                <span class="badge">FRESH</span>
-                <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400" alt="Potato">
-                <div class="veg-name">Local Potato (Aloo)</div>
-                <div class="unit">Per KG</div>
-                <div class="price">Rs. 45</div>
-                <button class="add-btn" onclick="addToCart()"><i class="fas fa-plus"></i> Add to Cart</button>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1464305795204-6f5bdee7351a?q=80&w=1470&auto=format&fit=crop" alt="Lady Finger">
             </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=400" alt="Tomato">
-                <div class="veg-name">Hybrid Tomato</div>
-                <div class="unit">Per KG</div>
-                <div class="price">Rs. 60</div>
-                <button class="add-btn" onclick="addToCart()"><i class="fas fa-plus"></i> Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <span class="badge">OFFER</span>
-                <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400" alt="Onion">
-                <div class="veg-name">Onion (Pyaj)</div>
-                <div class="unit">Per KG</div>
-                <div class="price">Rs. 85</div>
-                <button class="add-btn" onclick="addToCart()"><i class="fas fa-plus"></i> Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400" alt="Cauliflower">
-                <div class="veg-name">Cauliflower (Kauli)</div>
-                <div class="unit">Per Piece</div>
-                <div class="price">Rs. 40</div>
-                <button class="add-btn" onclick="addToCart()"><i class="fas fa-plus"></i> Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1583663848850-4c698a399672?w=400" alt="Chilli">
-                <div class="veg-name">Green Chilli</div>
-                <div class="unit">250 Grams</div>
-                <div class="price">Rs. 30</div>
-                <button class="add-btn" onclick="addToCart()"><i class="fas fa-plus"></i> Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=400" alt="Spinach">
-                <div class="veg-name">Spinach (Palungo)</div>
-                <div class="unit">Per Bunch</div>
-                <div class="price">Rs. 25</div>
-                <button class="add-btn" onclick="addToCart()"><i class="fas fa-plus"></i> Add to Cart</button>
+            <div class="content">
+                <p class="name-en">Lady Finger (Okra)</p>
+                <p class="name-np">राम-तोरई (Ram-Torai)</p>
+                <div class="price">Rs. 60 / kg</div>
+                <button class="add-btn" onclick="add()"><i class="fas fa-plus"></i> Add to Cart</button>
             </div>
         </div>
-    </main>
 
-    <div class="info-footer">
-        <div class="address-box">
-            <div>
-                <h3><i class="fas fa-map-marker-alt" style="color:var(--primary)"></i> Store Location</h3>
-                <p>Shankernagar, Rupandehi<br>Tilottama Municipality, Ward 02<br>Near Main Highway</p>
-                <p><strong>Opening Hours:</strong> 6 AM - 9 PM</p>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1614735241165-6756e1df61ab?q=80&w=1470&auto=format&fit=crop" alt="Eggplant">
             </div>
-            <div>
-                <h3><i class="fas fa-headset" style="color:var(--primary)"></i> Order via Phone</h3>
-                <p>Call us directly for home delivery within Shankernagar area.</p>
-                <p><strong>Phone:</strong> +977-98XXXXXXXX</p>
-                <p><strong>Gmail:</strong> freshmart.rupandehi@gmail.com</p>
+            <div class="content">
+                <p class="name-en">Eggplant / Brinjal</p>
+                <p class="name-np">भन्टा (Bhanta)</p>
+                <div class="price">Rs. 55 / kg</div>
+                <button class="add-btn" onclick="add()"><i class="fas fa-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?q=80&w=1470&auto=format&fit=crop" alt="Cabbage">
+            </div>
+            <div class="content">
+                <p class="name-en">Cabbage</p>
+                <p class="name-np">बन्दा गोभी (Banda Gopi)</p>
+                <div class="price">Rs. 45 / kg</div>
+                <button class="add-btn" onclick="add()"><i class="fas fa-plus"></i> Add to Cart</button>
             </div>
         </div>
     </div>
+</div>
 
-    <a href="https://wa.me/9779800000000" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<div class="footer">
+    <p><strong>FreshMart Grocery Store</strong></p>
+    <p>Shankernagar, Rupandehi, Nepal</p>
+    <p>Call: <a href="tel:+9779800000000">+977-98XXXXXXXX</a> | Gmail: freshmart@gmail.com</p>
+    <div style="margin-top:20px;">
+        <a href="https://wa.me/9779800000000" style="background:#25d366; color:white; padding:10px 20px; border-radius:5px; font-weight:bold;">
+            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+        </a>
+    </div>
+</div>
 
-    <footer>
-        <p>© 2026 FreshMart Grocery Shankernagar. Providing the best for Rupandehi.</p>
-    </footer>
-
-    <script>
-        let count = 0;
-        function addToCart() {
-            count++;
-            document.getElementById('cart-val').innerText = count;
-            alert("Added to your shopping list!");
-        }
-    </script>
+<script>
+    let count = 0;
+    function add() {
+        count++;
+        document.getElementById('cart-count').innerText = count;
+    }
+</script>
 
 </body>
 </html>
